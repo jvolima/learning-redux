@@ -19,3 +19,7 @@
 ### Actions
 - As actions são lançadas quando queremos alterar o estado do reducer, uma action tem o type que é qual ação ela deve tomar, e um payload, geralmente contendo um objeto ou outro dado.
 - As actions nunca devem ter regras de negócio, as regras são sempre responsabilidades do reducer.
+
+### Redux Saga
+- Middleware entre a action e o reducer.
+- Usamos quando queremos fazer uma chamada a API por exemplo.
