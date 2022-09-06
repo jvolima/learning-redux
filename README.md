@@ -23,3 +23,16 @@
 ### Redux Saga
 - Middleware entre a action e o reducer.
 - Usamos quando queremos fazer uma chamada a API por exemplo.
+
+# Outros aprendizados
+- Utilizar generators em funções para usar assincronismo sem o async e await, exemplo:
+```
+function* checkProductStock({ payload }: CheckProductStockRequest) {
+  const { product } = payload;
+
+  const currentQuantity: number = yield select((state: IState) => {
+    return state.cart.items.find(item => item.product.id === product.id)?.quantity ?? 0
+  });
+}
+```
+- O 'yield' faz o papel do 'await' nessas funções com generators.
